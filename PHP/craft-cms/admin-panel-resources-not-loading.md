@@ -23,3 +23,22 @@ Add the following to your config array in `config/general.php` or to your enviro
 ```
 
 If it still doesn't work try emptying the `web/cpresources` folder.
+
+### 2. set_time_limit() is blocked on your server
+
+#### Cause
+
+The set_time_limit() function is blocked by your hosting provider, this can give uncaught errors at multiple locations.
+
+#### Solution
+
+For me the problem was in `vendor/yiisoft/yii2/web/Response.php` in the `sendContent` method. A couple of lines in, the existence of the function is checked but the errors should be suppressed as well. To do this you just have to add an @ in front off the function call.
+
+```php
+if (function_exists('set_time_limit')) {
+	@set_time_limit(0); // Reset time limit for big files
+} else {
+	Yii::warning('set_time_limit() is not available', __METHOD__);
+}
+```
+
