@@ -13,19 +13,19 @@
 2. Login to the registry 
 
    ```
-   npm login --registry=http://localhost:4873
+   npm login --registry http://localhost:4873
    ```
 
 3. Publish your package to the registry 
 
    ```
-   npm publish  --registry=http://localhost:4873
+   npm publish  --registry http://localhost:4873
    ```
 
 4. Install your package from the registry
 
    ```
-   npm install --registry=http://localhost:4873
+   npm install --registry http://localhost:4873
    ```
 
 #### Scoped packages
