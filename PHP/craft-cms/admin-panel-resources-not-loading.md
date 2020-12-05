@@ -4,7 +4,7 @@
 
 You're not using the default craft folder structure and the Admin panel resources css, js, ... are not loading
 
-## Possible solutions
+## Possible causes
 
 ### 1. @web alias is wrong
 
