@@ -2,7 +2,7 @@
 
 ## Problem
 
-You're not use the default craft folder structure and the Admin panel resources css, js, ... are not loading
+You're not using the default craft folder structure and the Admin panel resources css, js, ... are not loading
 
 ## Possible solutions
 
